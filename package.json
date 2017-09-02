@@ -19,7 +19,9 @@
   "homepage": "https://github.com/sonalsatpute/react-youtube-video-search#readme",
   "dependencies": {
     "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"
   }
