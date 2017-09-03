@@ -4,8 +4,9 @@ class SearchBar extends Component{
 
     render(){
         return (
-            <div className="search-bar">
-                <input onChange={event => console.log (event.target.value)}/>
+            <div className="search-box">
+                <input placeholder="Search" 
+                    onChange={event => console.log (event.target.value)}/>
             </div>
         );
     }
