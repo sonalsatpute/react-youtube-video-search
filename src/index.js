@@ -18,18 +18,19 @@ class App extends Component {
         };
 
         this.videoSearch('reactjs');
+        this.videoSearch = this.videoSearch.bind(this);
     }
 
     videoSearch(term){
         YTSearch({ key: API_KEY, term: term}, videos => {
-            this.setState( { videos: videos });
+            this.setState( { videos : videos });
         });
     }
 
     render(){
         return (
             <div>
-                <SearchBar />
+                <SearchBar onSearchTermChange={this.videoSearch} />
                 <VideoList videos={this.state.videos} />
 
             </div>
