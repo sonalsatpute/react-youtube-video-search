@@ -10,11 +10,18 @@ class SearchBar extends Component{
 
     render(){
         return (
-            <div className="search-box">
-                <input placeholder="Search" 
-                    value={this.state.term} 
-                    onChange={ event => this.onInputChange(event.target.value) }/>
-            </div>
+            <nav className="navbar navbar-default">
+                <div className="navbar-form navbar-left" >
+                    <div className="navbar-header">
+                        <a className="navbar-brand" href="#">
+                            :: React YouTube Search App ::
+                        </a>
+                        <input type="text" className="form-control" placeholder="Search"
+                            value={this.state.term} 
+                            onChange={ event => this.onInputChange(event.target.value) }/>
+                    </div>
+                </div>
+            </nav>
         );
     }
 

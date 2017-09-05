@@ -5,12 +5,16 @@ const VideoList = (props) =>{
 
     const items = props.videos.map( (video) => {
         return(
-            <VideoListItem key={video.etag} video={video}/>
+            <VideoListItem 
+                key={video.etag} 
+                video={video}
+                onVideoSelect={props.onVideoSelect}
+            />
         );
     });
 
     return(
-        <ul>
+        <ul className="col-md-8">
             {items}
         </ul>
     );

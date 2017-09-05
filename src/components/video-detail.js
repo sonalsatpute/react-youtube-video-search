@@ -4,7 +4,7 @@ const VideoDetail = ({video}) => {
 
     if (!video){
         return (
-            <div>Loading ... .. .{video}</div>
+            <div>Loading... .. .</div>
         );
     }
 
@@ -16,9 +16,10 @@ const VideoDetail = ({video}) => {
             <div className="embed-responsive embed-responsive-16by9">
                 <iframe className="embeb-responsive-item" src={url}></iframe>
             </div>
-            <div className="details">
-                <div>{video.snippet.title }</div>
-                <div>{video.snippet.description}</div>      
+
+            <div className="page-header">
+                <h2>{video.snippet.title }</h2>
+                <h4>{video.snippet.description}</h4>
             </div>
         </div>
     );

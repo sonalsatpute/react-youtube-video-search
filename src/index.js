@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom'
 
@@ -34,11 +35,15 @@ class App extends Component {
     }
 
     render(){
+        const onSearch = _.debounce((term) => {this.videoSearch(term)}, 1000);
+
         return (
             <div>
-                <SearchBar onSearchTermChange={this.videoSearch} />
-                <VideoDetail video={this.state.selectedVideo} />
-                <VideoList videos={this.state.videos} />
+                <SearchBar onSearchTermChange={onSearch} />
+                <div className="row">
+                    <div className="col-xs-12 col-md-8"><VideoDetail video={this.state.selectedVideo} /></div>
+                    <div className="col-xs-6 col-md-4"><VideoList videos={this.state.videos} onVideoSelect={ (selectedVideo) => this.setState({selectedVideo}) }/></div>
+                </div>
             </div>
         );
     }
