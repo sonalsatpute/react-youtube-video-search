@@ -14,7 +14,7 @@ const VideoDetail = ({video}) => {
     return(
         <div className="col-mid-8">
             <div className="embed-responsive embed-responsive-16by9">
-                <iframe className="embeb-responsive-item" src={url}></iframe>
+                <iframe className="embeb-responsive-item" src={url} title='youtube player'></iframe>
             </div>
 
             <div className="page-header">
